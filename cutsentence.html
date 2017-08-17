@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cutSentence HomeWork</title>
+</head>
+<body>
+<div class="form">
+    <label for="userText">Text </label><input type="text" id="userText" class="userText">
+    <label for="userNum">Number </label><input type="number" id="userNum" class="userNum">
+    <input type="submit" value="Submit" class="checkSubmit">
+</div>
+<div class="result"></div>
+
+<script>
+    //to do html moka
+    //var usertext = document.querySelector('.userText').value;
+    //var userlength = document.querySelector('.userNum').value;
+    //var result = document.querySelector('.result');
+
+    var usertext = 'This is an interesting exercise';
+    var userlength = 8;
+
+    function cutSentence(usertext,userlength) {
+        var originalLength = usertext.length;
+
+        if (userlength > originalLength) {
+            return usertext;
+        }
+        else {
+            var words = usertext.split(" ");
+            var counter = words[0].length;
+            var i = 0;
+
+            for (i;i<words.length; i++) {
+                if (counter < userlength) {
+                    counter = counter + words[i+1].length + 1;
+                }
+                else
+                {
+                    var resultText = "";
+                    for(var k = 0; k <= i; k++)
+                    {
+                        if(k!=i) {
+                            resultText = resultText.concat(words[k] + " ");
+                        }
+                        else
+                        {
+                            resultText = resultText.concat(words[k]+"...");
+                        }
+
+                    }
+
+                    return resultText;
+                }
+
+            }
+
+        }
+    }
+
+
+
+    //var checkSubmit = document.querySelector('.checkSubmit');
+    //checkSubmit.addEventListener('click', cutSentence(usertext,userlength));
+
+
+
+
+    console.log(cutSentence(usertext,userlength));
+
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "proclaim",
+  "version": "3.4.5",
+  "description": "A simple assertion library for server and client side JavaScript",
+  "keywords": [
+    "assert",
+    "test"
+  ],
+  "author": "Rowan Manning (http://rowanmanning.co.uk/)",
+  "license": "MIT",
+  "homepage": "https://github.com/rowanmanning/proclaim",
+  "bugs": "https://github.com/rowanmanning/proclaim/issues",
+  "main": "./lib/proclaim.js",
+  "_release": "3.4.5",
+  "_resolution": {
+    "type": "version",
+    "tag": "3.4.5",
+    "commit": "7dcc6fd0941ce8318f9f5d91adf156e7b62ca9ee"
+  },
+  "_source": "https://github.com/rowanmanning/proclaim.git",
+  "_target": "^3.4.5",
+  "_originalSource": "proclaim"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "javascript-course-2017q3",
+  "description": "Course homework repository",
+  "main": "index.js",
+  "authors": [
+    "fopi <fodorpeter@webshopexperts.hu>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "proclaim": "^3.4.5"
+  }
+}

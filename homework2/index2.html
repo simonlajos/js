@@ -13,18 +13,9 @@
 <script>
 
     function absoluteSorting(numbers) {
-        var temp;
-
         numbers = numbers.sort(function (x, y) {
             return Math.abs(x) - Math.abs(y);
         });
-        for (var i = 1; i < numbers.length; i++) {
-            if (Math.abs(numbers[i]) < Math.abs(numbers[i - 1])) {
-                temp = numbers[i - 1];
-                numbers[i - 1] = numbers[i];
-                numbers[i] = temp;
-            }
-        }
 
         return numbers;
 

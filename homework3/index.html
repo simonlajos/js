@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework 3/1</title>
+    <script src="../common/proclaim/lib/proclaim.js"></script>
+    <script>
+        var assert = proclaim;
+    </script>
+</head>
+<body>
+
+<script>
+    function createIntervals(numbers) {
+        var intervals = [];
+        var fromIndex = 0;
+        var toIndex = 0;
+
+        numbers.sort(function(a, b) {
+            return a - b;
+        });
+
+        numbers.forEach(function (num,i) {
+            if( ((numbers[i])+1) !== numbers[i+1] ){
+                toIndex = i;
+                intervals.push([numbers[fromIndex], numbers[toIndex]]);
+                fromIndex = i + 1;
+            }
+        });
+
+        return intervals;
+    }
+</script>
+<script>
+    assert.deepEqual(createIntervals([1, 2, 3, 4, 5, 7, 8, 12]), [[1, 5], [7, 8], [12, 12]], "First");
+    assert.deepEqual(createIntervals([1, 2, 3, 6, 7, 8, 4, 5]), [[1, 8]], "Second");
+    alert("Congratulation!!!");
+</script>
+</body>
+</html>

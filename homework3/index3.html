@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework 3/3</title>
+</head>
+<body>
+<a style="border-radius:4px;cursor: pointer;background-color:rgba(0,0,0,0.8);color: #fff;padding: 3px 12px;" id="show-btn">show new quote</a>
+<ul id="quotes-list">
+
+</ul>
+<script>
+    var quotesListOutput =  document.getElementById('quotes-list');
+    var btn = document.getElementById('show-btn');
+    var quotes = [
+        {
+            quote: "Első idézet",
+            author: "John Doe"
+        },
+        {
+            quote: "Aminek kezdete van, véget is ér egyszer. Békélj meg ezzel, s minden jóra fordul.",
+            author: "Buddha"
+        },
+        {
+            quote: "Hitelesség nincsen konkrétság nélkül.",
+            author: "Oravecz Imre"
+        },
+        {
+            quote: "A folyton harcot emlegető politikusoknál aligha van veszedelmesebb fajta.",
+            author: "Nemere István"
+        },
+        {
+            quote: "Mindenki követhet el hibát, a ceruza végén is ezért van radír.",
+            author: "A Simpson család c. film"
+        },
+        {
+            quote: "Minden munka: amit meg kell tenni, és minden szórakozás: amit önként vállal az ember.",
+            author: "Mark Twain"
+        },
+        {
+            quote: "Ha a kacsa nem tud úszni, nem a víz a hülye.",
+            author: "Ismereetlen"
+        },
+        {
+            quote: "A barométer nem tehet a viharról, melyet órákkal előre jelez.",
+            author: "Márai Sándor"
+        }
+    ];
+
+    function createQuotesList() {
+        var i = Math.floor(Math.random() * (quotes.length));
+        var li = document.createElement('li');
+        li.innerHTML = " &quot;" + quotes[i]['quote'] + "&quot;" + " by " + quotes[i]['author'];
+        quotesListOutput.appendChild(li);
+    }
+
+    btn.onclick = createQuotesList;
+
+</script>
+
+</body>
+</html>
